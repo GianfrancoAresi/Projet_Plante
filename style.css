@@ -1,0 +1,196 @@
+/* La grille : on limite la taille maximum d'une colonne */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* On force les colonnes entre 250px et 300px max */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+    gap: 20px;
+    justify-content: center; /* Centre les cartes si elles sont peu nombreuses */
+    padding: 20px;
+}
+
+.header-section {
+    padding: 30px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative; /* Pour que le bouton se place par rapport au bandeau */
+    
+    /* Style Jour */
+    background-color: #ffffff;
+    border-bottom: 2px solid #eef2eed1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+/* La carte : on s'assure qu'elle ne dépasse pas */
+.plant-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* L'image : la clé pour qu'elle reste petite */
+.plant-img {
+    width: 100%;
+    height: 200px; /* On fixe une hauteur */
+    object-fit: cover; /* Recadre l'image sans la déformer */
+}
+
+.plant-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.plant-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 45px; /* On fixe la hauteur du texte pour que tout soit aligné */
+    overflow: hidden;
+}
+.contact-btn {
+    text-decoration: none;
+    background-color: white;
+    color: #2d5a27;
+    padding: 8px 15px;
+    border: 2px solid #2d5a27;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: all 0.3s;
+    white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+}
+
+.contact-btn:hover {
+    background-color: #2d5a27;
+    color: white;
+}
+.fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: #ccc; /* Gris par défaut */
+    font-size: 1.2em;
+    transition: all 0.3s;
+}
+
+.fav-btn.active {
+    color: #e74c3c; /* Rouge quand activé */
+    transform: scale(1.1);
+}
+
+
+/*---- Page D'accueil ----*/
+        /* Styles de la mise en page */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        .header-spacer { width: 250px; } 
+
+        /* Boutons du Header */
+        .top-nav {
+            width: 250px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        .btn-ui {
+            text-decoration: none;
+            background-color: white;
+            padding: 8px 15px;
+            border: 2px solid #2d5a27;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        .btn-contact { 
+             color: #2d5a27;
+             border-color: #2d5a27; }
+
+        .btn-contact:hover {
+             background: #2d5a27;
+             color: white; }
+        
+        .btn-fav-filter { 
+            color: #e74c3c; 
+            border-color: #e74c3c; }
+
+        .btn-fav-filter.active-filter { 
+            background: #e74c3c; 
+            color: white; }
+
+        /* Recherche et Filtres */
+        .search-box { 
+            text-align: center; 
+            margin: 20px 0; }
+
+        .search-box input { 
+            padding: 10px 20px; 
+            width: 300px; 
+            border-radius: 25px; 
+            border: 2px solid #2d5a27; 
+            outline: none; }
+
+        .search-box button { 
+            padding: 10px 20px; 
+            border-radius: 25px; 
+            border: none; 
+            background: #2d5a27; 
+            color: white; cursor: pointer; 
+            margin-left: -50px; }
+
+            
+        .filter-bar { 
+            text-align: center; 
+            margin-bottom: 40px; }
+
+        .filter-link { 
+            text-decoration: none; 
+            color: #2d5a27; 
+            margin: 0 10px; 
+            font-size: 0.9em; 
+            padding: 5px 10px; 
+            border-bottom: 2px solid transparent; }
+
+        .filter-link.active { 
+            font-weight: bold; 
+            border-bottom: 2px solid #2d5a27; }
+
+        /* Carte Plante et Bouton Coeur */
+        .fav-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: #ccc;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .fav-btn.active { color: #e74c3c; transform: scale(1.1); }
